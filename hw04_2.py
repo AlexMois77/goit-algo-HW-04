@@ -17,12 +17,12 @@ def get_cats_info(path):
                     id, name, age = el.split(',')   # висмикуємо данні про кошаків
                     dict_total["id"] = id           # закидаємо данні про кошаків: АйДі
                     dict_total["name"] = name       # закидаємо данні про кошаків: Ім'я
-                    dict_total["age"] = age         # закидаємо данні про кошаків: на скільки досвідчений котик
-                    cats_info.append(str(dict_total)) # збираємо данні про кошаків в список
+                    dict_total["age"] = age        # закидаємо данні про кошаків: на скільки досвідчений котик
+                    cats_info.append(dict_total.copy()) # збираємо данні про кошаків в список
             return cats_info
         else:
             return "Перевірте вказаний шлях та ім'я файла (повинно бути: salary_file.txt)"
     except OSError as err:
         return f('Помилка доступу до файлу', {err})
 
-get_cats_info("E:\piton_kurs\kurs2024\homework\HW4\cats_file.txt")
+print (get_cats_info("E:\piton_kurs\kurs2024\homework\HW4\cats_file.txt"))
