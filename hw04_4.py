@@ -22,6 +22,7 @@ def show_all(contacts):
     return contacts
 
 def show_phone(args, contacts):
+    print (args)
     name = args[0]
     name = name.title()
     if name in contacts:

@@ -2,7 +2,7 @@ from pathlib import Path
 
 def get_cats_info(path):
     try:
-        full_path = Path(path) / "cats_file.txt" # додаємо лінк - вказаний шлях до файлу
+        full_path = Path(path)# додаємо лінк - вказаний шлях до файлу
 
         if full_path.exists() and full_path.is_file(): # Перевіряємо чи є така дерікторія і чи є файл
         
@@ -25,4 +25,4 @@ def get_cats_info(path):
     except OSError as err:
         return f('Помилка доступу до файлу', {err})
 
-get_cats_info("E:\piton_kurs\kurs2024\homework\HW4")
+get_cats_info("E:\piton_kurs\kurs2024\homework\HW4\cats_file.txt")

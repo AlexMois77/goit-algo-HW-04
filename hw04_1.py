@@ -2,7 +2,7 @@ from pathlib import Path
 
 def total_salary(path):
     try: 
-        full_path = Path(path) / "salary_file.txt" # додаємо лінк - вказаний шлях до файлу
+        full_path = Path(path) # додаємо лінк - вказаний шлях до файлу
         
         if full_path.exists() and full_path.is_file(): # Перевірка існування папки та файлу
             
@@ -28,6 +28,6 @@ def total_salary(path):
     except OSError as err:
         return f('Помилка доступу до файлу', {err})
 
-total_salary("E:\piton_kurs\kurs2024\homework\HW4")
+total_salary("E:\piton_kurs\kurs2024\homework\HW4\salary_file.txt")
 
 
